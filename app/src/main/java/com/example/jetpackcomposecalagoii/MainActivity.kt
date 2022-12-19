@@ -44,22 +44,15 @@ class MainActivity : ComponentActivity() {
 
                     color = MaterialTheme.colors.background
                 ) {
-                    var show by remember { mutableStateOf(false) }
-                    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        Button(onClick = { show = true }) {
-                            Text(text = "Mostrar Dialogo")
-                        }
-                        MyCofirmationDialog(
-                            show = show,
-                            onDismiss = {show = false}
-                        )
+
+                    SuperHeroGridView()
 
                         }
                     }
                 }
             }
         }
-    }
+
 
     @Preview(showBackground = true)
     @Composable
